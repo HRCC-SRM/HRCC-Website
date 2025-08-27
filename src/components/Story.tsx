@@ -79,7 +79,7 @@ const FloatingImage: React.FC = () => {
                   onMouseLeave={handleMouseLeave}
                   onMouseUp={handleMouseLeave}
                   onMouseEnter={handleMouseLeave}
-                  src="/img/entrance.webp"
+                  src="/img/entrance.png"
                   alt="entrance"
                   className="object-contain"
                 />
