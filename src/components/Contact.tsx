@@ -40,13 +40,14 @@ const Contact: React.FC = () => {
 
         <div className="flex flex-col items-center text-center">
           <p className="mb-10 font-general text-[10px] uppercase">
-            Join Zentry
+            Join Hacker Rank Tech Circle
           </p>
 
           <AnimatedTitle
-            title="let&#39;s b<b>u</b>ild the <br /> new era of <br /> g<b>a</b>ming t<b>o</b>gether."
-            containerClass="special-font !md:text-[6.2rem] w-full font-zentry !text-5xl !font-black !leading-[.9]"
-          />
+  title="j<b>o</b>in the <br /> re<b>v</b>olution of <br /> t<b>e</b>ch "
+  containerClass="special-font !md:text-[6.2rem] w-full font-zentry !text-5xl !font-black !leading-[.9]"
+/>
+
 
           <Button
             id="contact-us-btn" // Added id prop as required by Button component

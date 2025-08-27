@@ -51,13 +51,16 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({
           key={index}
           className="flex-center max-w-full flex-wrap gap-2 px-10 md:gap-3"
         >
-          {line.split(" ").map((word: string, idx: number) => (
-            <span
-              key={idx}
-              className="animated-word"
-              dangerouslySetInnerHTML={{ __html: word }}
-            />
-          ))}
+          {line.split(" ").map((word: string, idx: number) => {
+            return (
+              <span
+                key={idx}
+                // preserve gradient class if present
+                className={clsx("animated-word", word.includes("gradient-text") && "gradient-text")}
+                dangerouslySetInnerHTML={{ __html: word }}
+              />
+            );
+          })}
         </div>
       ))}
     </div>

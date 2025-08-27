@@ -10,7 +10,7 @@ interface BentoCardProps {
   src: string;
   title: React.ReactNode;
   description?: string;
-  isComingSoon?: boolean;
+  isapplynow?: boolean;
 }
 
 interface CursorPosition {
@@ -62,7 +62,7 @@ export const BentoCard: React.FC<BentoCardProps> = ({
   src,
   title,
   description,
-  isComingSoon,
+  isapplynow,
 }) => {
   const [cursorPosition, setCursorPosition] = useState<CursorPosition>({
     x: 0,
@@ -101,25 +101,26 @@ export const BentoCard: React.FC<BentoCardProps> = ({
           )}
         </div>
 
-        {isComingSoon && (
-          <div
-            ref={hoverButtonRef}
-            onMouseMove={handleMouseMove}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            className="border-hsla relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-black px-5 py-2 text-xs uppercase text-white/20"
-          >
-            <div
-              className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
-              style={{
-                opacity: hoverOpacity,
-                background: `radial-gradient(100px circle at ${cursorPosition.x}px ${cursorPosition.y}px, #656fe288, #00000026)`,
-              }}
-            />
-            <TiLocationArrow className="relative z-20" />
-            <p className="relative z-20">coming soon</p>
-          </div>
-        )}
+        {isapplynow && (
+  <div
+    ref={hoverButtonRef}
+    onMouseMove={handleMouseMove}
+    onMouseEnter={handleMouseEnter}
+    onMouseLeave={handleMouseLeave}
+    className="border-hsla relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-black px-5 py-2 text-xs uppercase text-[#05C770]"
+  >
+    <div
+      className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
+      style={{
+        opacity: hoverOpacity,
+        background: `radial-gradient(100px circle at ${cursorPosition.x}px ${cursorPosition.y}px, #05C77088, #00000026)`,
+      }}
+    />
+    <TiLocationArrow className="relative z-20" />
+    <p className="relative z-20">Apply Now</p>
+  </div>
+)}
+
       </div>
     </div>
   );
@@ -129,28 +130,31 @@ const Features: React.FC = () => (
   <section className="bg-black pb-52">
     <div className="container mx-auto px-3 md:px-10">
       <div className="px-5 py-32">
-        <p className="font-circular-web text-lg text-blue-50">
-          Into the Metagame Layer
-        </p>
-        <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
-          Immerse yourself in a rich and ever-expanding universe where a vibrant
-          array of products converge into an interconnected overlay experience
-          on your world.
-        </p>
+      <p className="font-circular-web text-lg text-blue-50">
+  HackerRank Tech Circle
+</p>
+<p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
+  We are the first official HackerRank Student Chapter in India, fostering a
+  community of innovators, coders, and problem-solvers. Our mission is to
+  empower students with technical skills, collaborative opportunities, and
+  real-world exposure to prepare for the challenges of tomorrow.
+</p>
+
       </div>
 
       <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
-        <BentoCard
-          src="videos/feature-1.mp4"
-          title={
-            <>
-              radia<b>n</b>t
-            </>
-          }
-          description="A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure."
-          isComingSoon
-        />
-      </BentoTilt>
+  <BentoCard
+    src="videos/feature-1.mp4"
+    title={
+      <>
+        <b>HackerRank</b>
+      </>
+    }
+    description="HackerRank is a leading platform for competitive coding, technical interviews, and skill development, empowering developers and companies worldwide."
+    isapplynow
+  />
+</BentoTilt>
+
 
       <div className="grid h-[135vh] w-full grid-cols-2 grid-rows-3 gap-7">
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
@@ -158,11 +162,11 @@ const Features: React.FC = () => (
             src="videos/feature-2.mp4"
             title={
               <>
-                zig<b>m</b>a
+                Tech<b>n</b>ical
               </>
             }
-            description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
-            isComingSoon
+            description="Dedicated to advancing technical skills in coding, AI, and hardware through innovation and collaboration."
+            isapplynow
           />
         </BentoTilt>
 
@@ -171,11 +175,11 @@ const Features: React.FC = () => (
             src="videos/feature-3.mp4"
             title={
               <>
-                n<b>e</b>xus
+                c<b>rea</b>tive
               </>
             }
-            description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
-            isComingSoon
+            description="Where imagination meets design, producing visuals, content, and media that inspire, engage, and connect audiences."
+            isapplynow
           />
         </BentoTilt>
 
@@ -184,18 +188,18 @@ const Features: React.FC = () => (
             src="videos/feature-4.mp4"
             title={
               <>
-                az<b>u</b>l
+                c<b>orpor</b>ate
               </>
             }
-            description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
-            isComingSoon
+            description="Building partnerships, managing events, and ensuring smooth operations through leadership, strategy, and collaboration."
+            isapplynow
           />
         </BentoTilt>
 
         <BentoTilt className="bento-tilt_2">
-          <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
+          <div className="flex size-full flex-col justify-between bg-[#05C770] p-5">
             <h1 className="bento-title special-font max-w-64 text-black">
-              M<b>o</b>re co<b>m</b>ing s<b>o</b>on.
+              r<b>ecruit</b>ments o<b>pe</b>n.
             </h1>
 
             <TiLocationArrow className="m-5 scale-[5] self-end" />

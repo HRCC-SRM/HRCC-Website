@@ -103,6 +103,7 @@ body {
     @apply uppercase md:text-6xl text-4xl font-black font-zentry;
   }
 
+
   .story-img-container {
     @apply relative md:h-dvh h-[90vh] w-full;
     filter: url("#flt_tag");
@@ -270,4 +271,11 @@ body {
     transform: translateY(66%) scale(0.65);
     opacity: 0.8;
   }
+}
+.gradient-text {
+  background: linear-gradient(90deg, #05C770, #00CFFF); /* green → cyan */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
