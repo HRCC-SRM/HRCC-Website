@@ -84,6 +84,17 @@ export const BentoCard: React.FC<BentoCardProps> = ({
   const handleMouseEnter = () => setHoverOpacity(1);
   const handleMouseLeave = () => setHoverOpacity(0);
 
+  // Determine video classes based on the source
+  const getVideoClasses = () => {
+    if (src.includes('feature-2.mp4')) {
+      return "absolute left-0 top-0 size-full object-cover object-center scale-[1.8]";
+    }
+    if (src.includes('feature-3.mp4') || src.includes('feature-4.mp4')) {
+      return "absolute left-0 top-0 size-full object-cover object-center scale-[1.08]";
+    }
+    return "absolute left-0 top-0 size-full object-cover object-center";
+  };
+
   return (
     <div className="relative size-full">
       <video
@@ -91,13 +102,13 @@ export const BentoCard: React.FC<BentoCardProps> = ({
         loop
         muted
         autoPlay
-        className="absolute left-0 top-0 size-full object-cover object-center"
+        className={getVideoClasses()}
       />
-      <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
+      <div className="relative z-10 flex size-full flex-col justify-between p-5 text-white">
         <div>
-          <h1 className="bento-title special-font">{title}</h1>
+          <h1 className="bento-title special-font text-white font-bold drop-shadow-[2px_2px_4px_rgba(0,0,0,0.8)] stroke-black stroke-2">{title}</h1>
           {description && (
-            <p className="mt-3 max-w-64 text-xs md:text-base">{description}</p>
+            <p className="mt-3 max-w-64 text-xs md:text-base text-white font-semibold drop-shadow-[1px_1px_3px_rgba(0,0,0,0.9)]">{description}</p>
           )}
         </div>
 
@@ -170,7 +181,7 @@ const Features: React.FC = () => (
           />
         </BentoTilt>
 
-        <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
+        <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1">
           <BentoCard
             src="videos/feature-3.mp4"
             title={
@@ -183,7 +194,7 @@ const Features: React.FC = () => (
           />
         </BentoTilt>
 
-        <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
+        <BentoTilt className="bento-tilt_1 md:col-span-1">
           <BentoCard
             src="videos/feature-4.mp4"
             title={
