@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import NavBar from "./components/Navbar";
 import Features from "./components/Features";
 import Story from "./components/Story";
+import Team from "./components/Team";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -14,6 +15,7 @@ function App() {
       <About />
       <Features />
       <Story />
+      <Team />
       <Contact />
       <Footer />
     </main>

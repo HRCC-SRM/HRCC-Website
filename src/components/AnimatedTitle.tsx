@@ -45,18 +45,35 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({
   }, []);
 
   return (
-    <div ref={containerRef} className={clsx("animated-title", containerClass)}>
+    <div 
+      ref={containerRef} 
+      className={clsx("animated-title", containerClass)} 
+      style={{ 
+        textTransform: 'none',
+        fontVariant: 'normal',
+        fontFeatureSettings: '"case" off'
+      }}
+    >
       {title.split("<br />").map((line: string, index: number) => (
         <div
           key={index}
           className="flex-center max-w-full flex-wrap gap-2 px-10 md:gap-3"
+          style={{ 
+            textTransform: 'none',
+            fontVariant: 'normal',
+            fontFeatureSettings: '"case" off'
+          }}
         >
           {line.split(" ").map((word: string, idx: number) => {
             return (
               <span
                 key={idx}
-                // preserve gradient class if present
                 className={clsx("animated-word", word.includes("gradient-text") && "gradient-text")}
+                style={{ 
+                  textTransform: 'none',
+                  fontVariant: 'normal',
+                  fontFeatureSettings: '"case" off'
+                }}
                 dangerouslySetInnerHTML={{ __html: word }}
               />
             );

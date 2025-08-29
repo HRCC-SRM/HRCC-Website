@@ -103,7 +103,7 @@ const Hero: React.FC = () => {
             <VideoPreview>
               <div
                 onClick={handleMiniVdClick}
-                className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"
+                className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100 touch-manipulation"
               >
                 <video
                   ref={nextVdRef}
@@ -139,32 +139,32 @@ const Hero: React.FC = () => {
           />
         </div>
 
-        <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">
-          G<b>A</b>MING
+        <h1 className="special-font text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-black absolute bottom-3 right-3 sm:bottom-5 sm:right-5 z-40 text-blue-100" style={{ textTransform: 'none', fontVariant: 'normal', fontFeatureSettings: '"case" off' }}>
+          Tech Circle
         </h1>
 
         <div className="absolute left-0 top-0 z-40 size-full">
-          <div className="mt-24 px-5 sm:px-10">
-            <h1 className="special-font hero-heading text-blue-100">
-              redefi<b>n</b>e
+          <div className="mt-16 px-4 sm:mt-24 sm:px-10">
+            <h1 className="special-font text-4xl sm:text-5xl md:text-7xl lg:text-9xl xl:text-[12rem] font-black text-blue-100" style={{ textTransform: 'none', fontVariant: 'normal', fontFeatureSettings: '"case" off' }}>
+              Hacker Rank
             </h1>
 
-            <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-              Enter the Metagame Layer <br /> Unleash the Play Economy
+            <p className="mb-4 max-w-56 sm:max-w-64 text-sm sm:text-base font-robert-regular text-blue-100">
+              Join the Circle <br /> Where Ideas Become Impact.
             </p>
 
             <Button
               id="watch-trailer"
               title="Watch trailer"
               leftIcon={<TiLocationArrow />}
-              containerClass="bg-yellow-300 flex-center gap-1"
+              containerClass="bg-gradient-to-r from-green-500 to-lime-200 flex-center gap-1 text-sm sm:text-base"
             />
           </div>
         </div>
       </div>
 
       <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
-        G<b>A</b>MING
+        Tech C<b>ircle</b>
       </h1>
     </div>
   );

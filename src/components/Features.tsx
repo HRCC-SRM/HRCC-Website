@@ -87,12 +87,15 @@ export const BentoCard: React.FC<BentoCardProps> = ({
   // Determine video classes based on the source
   const getVideoClasses = () => {
     if (src.includes('feature-2.mp4')) {
-      return "absolute left-0 top-0 size-full object-cover object-center scale-[1.8]";
+      return "absolute inset-0 w-auto h-full min-w-full min-h-full object-cover scale-[2]";
     }
-    if (src.includes('feature-3.mp4') || src.includes('feature-4.mp4')) {
-      return "absolute left-0 top-0 size-full object-cover object-center scale-[1.08]";
+    if (src.includes('feature-3.mp4')) {
+      return "absolute inset-0 w-full h-auto min-w-full min-h-full object-cover scale-[2]";
     }
-    return "absolute left-0 top-0 size-full object-cover object-center";
+    if (src.includes('feature-4.mp4')) {
+      return "absolute inset-0 w-full h-auto min-w-full min-h-full object-cover scale-[2]";
+    }
+    return "absolute inset-0 w-full h-full object-cover scale-[2]";
   };
 
   return (
@@ -141,15 +144,7 @@ const Features: React.FC = () => (
   <section className="bg-black pb-52">
     <div className="container mx-auto px-3 md:px-10">
       <div className="px-5 py-32">
-      <p className="font-circular-web text-lg text-blue-50">
-  HackerRank Tech Circle
-</p>
-<p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
-  We are the first official HackerRank Student Chapter in India, fostering a
-  community of innovators, coders, and problem-solvers. Our mission is to
-  empower students with technical skills, collaborative opportunities, and
-  real-world exposure to prepare for the challenges of tomorrow.
-</p>
+    
 
       </div>
 
@@ -158,11 +153,14 @@ const Features: React.FC = () => (
     src="videos/feature-1.mp4"
     title={
       <>
-        <b>HackerRank</b>
+        <b>Hacker Rank</b> tech circle
       </>
     }
-    description="HackerRank is a leading platform for competitive coding, technical interviews, and skill development, empowering developers and companies worldwide."
-    isapplynow
+    description="We are the first official HackerRank Student Chapter in India, fostering a
+  community of innovators, coders, and problem-solvers. Our mission is to
+  empower students with technical skills, collaborative opportunities, and
+  real-world exposure to prepare for the challenges of tomorrow."
+    
   />
 </BentoTilt>
 
