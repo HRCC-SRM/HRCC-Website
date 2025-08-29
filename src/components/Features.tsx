@@ -153,7 +153,7 @@ const Features: React.FC = () => (
     src="videos/feature-1.mp4"
     title={
       <>
-        <b>Hacker Rank</b> tech circle
+        <b>Hacker Rank</b> Campus Crew
       </>
     }
     description="We are the first official HackerRank Student Chapter in India, fostering a

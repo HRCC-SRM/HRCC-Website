@@ -66,7 +66,7 @@ const FloatingImage: React.FC = () => {
 
         <div className="relative size-full">
           <AnimatedTitle
-            title="the st<b>o</b>ry of <br /> Hacker Rank Tech <b>Circle</b>"
+            title="the st<b>o</b>ry of <br /> Hacker Rank Campus <b>Crew</b>"
             containerClass="mt-8 md:mt-32 lg:mt-[13rem] pointer-events-none mix-blend-difference relative z-10"
           />
 

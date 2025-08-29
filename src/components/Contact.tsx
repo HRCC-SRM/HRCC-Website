@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
 
         <div className="flex flex-col items-center text-center">
           <p className="mb-10 font-general text-[10px] uppercase">
-            Join Hacker Rank Tech Circle
+            Join Hacker Rank Campus Crew
           </p>
 
           <AnimatedTitle

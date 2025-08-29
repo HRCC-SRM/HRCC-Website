@@ -30,7 +30,7 @@ const About = () => {
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-6 sm:mb-8 mt-20 sm:mt-36 flex flex-col items-center gap-3 sm:gap-5 px-4">
         <p className="font-general text-xs sm:text-sm uppercase md:text-[10px]">
-          Welcome to HRTC
+          Welcome to HRCC
         </p>
 
         <AnimatedTitle

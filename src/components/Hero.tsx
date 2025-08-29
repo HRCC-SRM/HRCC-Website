@@ -139,14 +139,14 @@ const Hero: React.FC = () => {
           />
         </div>
 
-        <h1 className="special-font text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-black absolute bottom-3 right-3 sm:bottom-5 sm:right-5 z-40 text-blue-100" style={{ textTransform: 'none', fontVariant: 'normal', fontFeatureSettings: '"case" off' }}>
-          Tech Circle
+        <h1 className="special-font text-4xl sm:text-5xl md:text-7xl lg:text-9xl xl:text-[12rem] font-black absolute right-5 bottom-5 z-40 text-blue-100" style={{ textTransform: 'none', fontVariant: 'normal', fontFeatureSettings: '"case" off' }}>
+          Campus Crew
         </h1>
 
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-16 px-4 sm:mt-24 sm:px-10">
             <h1 className="special-font text-4xl sm:text-5xl md:text-7xl lg:text-9xl xl:text-[12rem] font-black text-blue-100" style={{ textTransform: 'none', fontVariant: 'normal', fontFeatureSettings: '"case" off' }}>
-              Hacker Rank
+              HackerRank
             </h1>
 
             <p className="mb-4 max-w-56 sm:max-w-64 text-sm sm:text-base font-robert-regular text-blue-100">
@@ -163,8 +163,8 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
-        Tech C<b>ircle</b>
+      <h1 className="special-font text-4xl sm:text-5xl md:text-7xl lg:text-9xl xl:text-[12rem] font-black absolute bottom-5 right-5 text-black" style={{ textTransform: 'none', fontVariant: 'normal', fontFeatureSettings: '"case" off' }}>
+        Campus C<b>rew</b>
       </h1>
     </div>
   );
