@@ -183,7 +183,7 @@ const Team: React.FC = () => {
     {
       name: 'Aarushi Sarkar',
       role: 'Creative Lead',
-      image: 'public/team/aarushi.jpg',
+      image: 'public/team/aarushi.jpeg',
       socials: {
         linkedin: '#',
         github: '#'
