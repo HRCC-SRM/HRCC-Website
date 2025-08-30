@@ -148,7 +148,7 @@ const Features: React.FC = () => (
 
       </div>
 
-      <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
+      {/* <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
   <BentoCard
     src="videos/feature-1.mp4"
     title={
@@ -162,7 +162,7 @@ const Features: React.FC = () => (
   real-world exposure to prepare for the challenges of tomorrow."
     
   />
-</BentoTilt>
+</BentoTilt> */}
 
 
       <div className="grid h-[135vh] w-full grid-cols-2 grid-rows-3 gap-7">

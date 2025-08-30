@@ -2,22 +2,24 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { TiLocationArrow } from "react-icons/ti";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+// import { useEffect, useRef, useState } from "react";
 
 import Button from "./Button";
-import { VideoPreview } from "./VideoPreview";
+// import { VideoPreview } from "./VideoPreview";
 
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState<number>(1);
-  const [hasClicked, setHasClicked] = useState<boolean>(false);
+  const [currentIndex] = useState<number>(1);
+  // const [currentIndex, setCurrentIndex] = useState<number>(1);
+  // const [hasClicked, setHasClicked] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
   const [loadedVideos, setLoadedVideos] = useState<number>(0);
 
-  const totalVideos: number = 4;
-  const nextVdRef = useRef<HTMLVideoElement | null>(null);
+  const totalVideos: number = 1;
+  // const nextVdRef = useRef<HTMLVideoElement | null>(null);
 
   const handleVideoLoad = (): void => {
     setLoadedVideos((prev) => prev + 1);
@@ -29,38 +31,38 @@ const Hero: React.FC = () => {
     }
   }, [loadedVideos]);
 
-  const handleMiniVdClick = (): void => {
-    setHasClicked(true);
-    setCurrentIndex((prevIndex) => (prevIndex % totalVideos) + 1);
-  };
+  // const handleMiniVdClick = (): void => {
+  //   setHasClicked(true);
+  //   setCurrentIndex((prevIndex) => (prevIndex % totalVideos) + 1);
+  // };
 
-  useGSAP(
-    () => {
-      if (hasClicked && nextVdRef.current) {
-        gsap.set("#next-video", { visibility: "visible" });
-        gsap.to("#next-video", {
-          transformOrigin: "center center",
-          scale: 1,
-          width: "100%",
-          height: "100%",
-          duration: 1,
-          ease: "power1.inOut",
-          //@ts-expect-error this is currect
-          onStart: () => nextVdRef.current?.play(),
-        });
-        gsap.from("#current-video", {
-          transformOrigin: "center center",
-          scale: 0,
-          duration: 1.5,
-          ease: "power1.inOut",
-        });
-      }
-    },
-    {
-      dependencies: [currentIndex],
-      revertOnUpdate: true,
-    }
-  );
+  // useGSAP(
+  //   () => {
+  //     if (hasClicked && nextVdRef.current) {
+  //       gsap.set("#next-video", { visibility: "visible" });
+  //       gsap.to("#next-video", {
+  //         transformOrigin: "center center",
+  //         scale: 1,
+  //         width: "100%",
+  //         height: "100%",
+  //         duration: 1,
+  //         ease: "power1.inOut",
+  //         //@ts-expect-error this is currect
+  //         onStart: () => nextVdRef.current?.play(),
+  //       });
+  //       gsap.from("#current-video", {
+  //         transformOrigin: "center center",
+  //         scale: 0,
+  //         duration: 1.5,
+  //         ease: "power1.inOut",
+  //       });
+  //     }
+  //   },
+  //   {
+  //     dependencies: [currentIndex],
+  //     revertOnUpdate: true,
+  //   }
+  // );
 
   useGSAP(() => {
     gsap.set("#video-frame", {
@@ -85,7 +87,7 @@ const Hero: React.FC = () => {
   return (
     <div className="relative h-dvh w-screen overflow-x-hidden">
       {loading && (
-        <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
+        <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden ">
           <div className="three-body">
             <div className="three-body__dot"></div>
             <div className="three-body__dot"></div>
@@ -99,7 +101,8 @@ const Hero: React.FC = () => {
         className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75"
       >
         <div>
-          <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
+          {/* Center Clickable Video Loop - Commented Out */}
+          {/* <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
             <VideoPreview>
               <div
                 onClick={handleMiniVdClick}
@@ -116,9 +119,9 @@ const Hero: React.FC = () => {
                 />
               </div>
             </VideoPreview>
-          </div>
+          </div> */}
 
-          <video
+          {/* <video
             ref={nextVdRef}
             src={getVideoSrc(currentIndex)}
             loop
@@ -126,7 +129,7 @@ const Hero: React.FC = () => {
             id="next-video"
             className="absolute-center invisible absolute z-20 size-64 object-cover object-center"
             onLoadedData={handleVideoLoad}
-          />
+          /> */} {/* video loop for future events and plans */}
           <video
             src={getVideoSrc(
               currentIndex === totalVideos - 1 ? 1 : currentIndex
@@ -150,7 +153,7 @@ const Hero: React.FC = () => {
             </h1>
 
             <p className="mb-4 max-w-56 sm:max-w-64 text-sm sm:text-base font-robert-regular text-blue-100">
-              Join the Circle <br /> Where Ideas Become Impact.
+              Join the Crew <br /> Where Ideas Become Impact.
             </p>
 
             <Button

@@ -145,7 +145,7 @@ body {
 }
 
 .indicator-line {
-  @apply h-1 w-px rounded-full bg-white transition-all duration-200 ease-in-out;
+  @apply h-1 w-px rounded-full  transition-all duration-200 ease-in-out;
 }
 
 .indicator-line.active {
@@ -278,4 +278,79 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+
+/* Loading Screen Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+}
+
+.loading-logo {
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+.loading-text {
+  animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite, pulse 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Enhanced loading animations */
+.loading-content {
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.loading-progress {
+  transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Particle effects */
+.particle {
+  animation: particleFloat 4s ease-in-out infinite;
+  will-change: transform;
 }
