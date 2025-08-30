@@ -1,10 +1,10 @@
-import clsx from "clsx";
+
 import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
-import { TiLocationArrow } from "react-icons/ti";
 
-import Button from "./Button";
+
+
 
 const navItems = ["Home", "Domains", "About", "Contact"];
 
