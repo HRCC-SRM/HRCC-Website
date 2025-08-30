@@ -153,7 +153,7 @@ const Hero: React.FC = () => {
             </h1>
 
             <p className="mb-4 max-w-56 sm:max-w-64 text-sm sm:text-base font-robert-regular text-blue-100">
-              Join the Crew <br /> Where Ideas Become Impact.
+              Ranked by <b>Skill</b> <br /> Powered by <b>Intelligence</b>.
             </p>
 
             <Button
