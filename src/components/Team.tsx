@@ -81,7 +81,7 @@ const Team: React.FC = () => {
     {
       name: 'Abhiraj Bhowmick',
       role: 'Founder',
-      image: '/team/abhiraj.jpg',
+      image: 'public/team/abhiraj.jpg',
       socials: {
         twitter: 'rainboestrykr',
         instagram: 'abhiraj.fr',
@@ -94,7 +94,7 @@ const Team: React.FC = () => {
     {
       name: 'Yashi Ghosh',
       role: 'Founder',
-      image: '/team/yashi.jpg',
+      image: 'public/team/yashi.jpg',
       socials: {
         instagram: 'yashi.ghosh',
         linkedin: 'yashi-ghosh-2005m',
@@ -106,7 +106,7 @@ const Team: React.FC = () => {
     {
       name: 'Arnav Puggal',
       role: 'Founder',
-      image: '/team/puggal.jpeg',
+      image: 'public/team/puggal.jpeg',
       socials: {
         instagram: 'arnav_puggal',
         linkedin: 'arnav-puggal-ab72b5247',
@@ -118,7 +118,7 @@ const Team: React.FC = () => {
     {
       name: 'Tanvi Kabi',
       role: 'Founder',
-      image: '/team/tanvi.jpeg',
+      image: 'public/team/tanvi.jpeg',
       socials: {
         instagram: 'tanvikabi',
         linkedin: 'tanvi-kabi-44582b364',
@@ -130,18 +130,18 @@ const Team: React.FC = () => {
 
   const technicalLeads = [
     {
-      name: 'Technical Lead 1',
+      name: 'Pratyush Srivastava',
       role: 'Technical Lead',
-      image: '/img/team/tech_lead1.jpg',
+      image: 'public/team/pratyush.jpg',
       socials: {
         linkedin: '#',
         github: '#'
       }
     },
     {
-      name: 'Technical Lead 2',
+      name: 'Anik Das',
       role: 'Technical Lead',
-      image: '/img/team/tech_lead2.jpg',
+      image: 'public/team/anik.jpg',
       socials: {
         linkedin: '#',
         github: '#'
@@ -151,18 +151,18 @@ const Team: React.FC = () => {
 
   const corporateLeads = [
     {
-      name: 'Corporate Lead 1',
+      name: 'Ayush Kumar',
       role: 'Corporate Lead',
-      image: '/img/team/corp_lead1.jpg',
+      image: 'public/team/ayush.jpg',
       socials: {
         linkedin: '#',
         github: '#'
       }
     },
     {
-      name: 'Corporate Lead 2',
+      name: 'Amrita Hariharan',
       role: 'Corporate Lead',
-      image: '/img/team/corp_lead2.jpg',
+      image: 'public/team/amrita.jpg',
       socials: {
         linkedin: '#',
         github: '#'
@@ -172,18 +172,18 @@ const Team: React.FC = () => {
 
   const creativeLeads = [
     {
-      name: 'Creative Lead 1',
+      name: 'Shagun Upman',
       role: 'Creative Lead',
-      image: '/img/team/creative_lead1.jpg',
+      image: 'public/team/shagun.jpg',
       socials: {
         linkedin: '#',
         github: '#'
       }
     },
     {
-      name: 'Creative Lead 2',
+      name: 'Aarushi Sarkar',
       role: 'Creative Lead',
-      image: '/img/team/creative_lead2.jpg',
+      image: 'public/team/aarushi.jpg',
       socials: {
         linkedin: '#',
         github: '#'
