@@ -6,37 +6,15 @@ import { TiLocationArrow } from "react-icons/ti";
 
 import Button from "./Button";
 
-const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"];
+const navItems = ["Home", "Domains", "About", "Contact"];
 
 const NavBar = () => {
-  // State for toggling audio and visual indicator
-  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
-  const [isIndicatorActive, setIsIndicatorActive] = useState(false);
-
-  // Refs for audio and navigation container
-  const audioElementRef = useRef(null);
+  // Ref for navigation container
   const navContainerRef = useRef(null);
 
   const { y: currentScrollY } = useWindowScroll();
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-
-  // Toggle audio and visual indicator
-  const toggleAudioIndicator = () => {
-    setIsAudioPlaying((prev) => !prev);
-    setIsIndicatorActive((prev) => !prev);
-  };
-
-  // Manage audio playback
-  useEffect(() => {
-    if (isAudioPlaying) {
-      //@ts-expect-error this is an error
-      audioElementRef.current?.play();
-    } else {
-      //@ts-expect-error this is an error
-      audioElementRef.current?.pause();
-    }
-  }, [isAudioPlaying]);
 
   useEffect(() => {
     if (currentScrollY === 0) {
@@ -67,26 +45,36 @@ const NavBar = () => {
     });
   }, [isNavVisible]);
 
+  // Add scroll-based width shrinking
+  useEffect(() => {
+    const shrinkWidth = currentScrollY > 50 ? '30%' : '90%';
+    if (navContainerRef.current) {
+      //@ts-expect-error this is correct
+      navContainerRef.current.style.width = shrinkWidth;
+      //@ts-expect-error this is correct
+      navContainerRef.current.style.marginLeft = 'auto';
+      //@ts-expect-error this is correct
+      navContainerRef.current.style.marginRight = 'auto';
+    }
+  }, [currentScrollY]);
+
   return (
     <div
       ref={navContainerRef}
-      className="fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6"
+      className="fixed inset-x-0 top-4 z-50 h-12 border-none transition-all duration-700 sm:inset-x-6"
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
-          {/* Logo and Product button */}
+          {/* Logo */}
           <div className="flex items-center gap-7">
-            <img src="/img/logo.png" alt="logo" className="w-10" />
-
-            <Button
-              id="product-button"
-              title="Products"
-              rightIcon={<TiLocationArrow />}
-              containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
+            <img 
+              src="/img/Logo Light Narrow.png" 
+              alt="Hackerrank" 
+              className="h-8 w-auto object-contain"
             />
           </div>
 
-          {/* Navigation Links and Audio Button */}
+          {/* Navigation Links */}
           <div className="flex h-full items-center">
             <div className="hidden md:block">
               {navItems.map((item, index) => (
@@ -99,29 +87,6 @@ const NavBar = () => {
                 </a>
               ))}
             </div>
-
-            <button
-              onClick={toggleAudioIndicator}
-              className="ml-10 flex items-center space-x-0.5"
-            >
-              <audio
-                ref={audioElementRef}
-                className="hidden"
-                src="/audio/loop.mp3"
-                loop
-              />
-              {[1, 2, 3, 4].map((bar) => (
-                <div
-                  key={bar}
-                  className={clsx("indicator-line", {
-                    active: isIndicatorActive,
-                  })}
-                  style={{
-                    animationDelay: `${bar * 0.1}s`,
-                  }}
-                />
-              ))}
-            </button>
           </div>
         </nav>
       </header>

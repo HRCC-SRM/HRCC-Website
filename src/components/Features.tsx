@@ -86,13 +86,13 @@ export const BentoCard: React.FC<BentoCardProps> = ({
 
   // Determine video classes based on the source
   const getVideoClasses = () => {
-    if (src.includes('feature-2.mp4')) {
+    if (src.includes('feature-2')) {
       return "absolute inset-0 w-auto h-full min-w-full min-h-full object-cover scale-[2]";
     }
-    if (src.includes('feature-3.mp4')) {
+    if (src.includes('feature-3')) {
       return "absolute inset-0 w-full h-auto min-w-full min-h-full object-cover scale-[2]";
     }
-    if (src.includes('feature-4.mp4')) {
+    if (src.includes('feature-4')) {
       return "absolute inset-0 w-full h-auto min-w-full min-h-full object-cover scale-[2]";
     }
     return "absolute inset-0 w-full h-full object-cover scale-[2]";
@@ -100,13 +100,21 @@ export const BentoCard: React.FC<BentoCardProps> = ({
 
   return (
     <div className="relative size-full">
-      <video
-        src={src}
-        loop
-        muted
-        autoPlay
-        className={getVideoClasses()}
-      />
+      {src.endsWith('.gif') ? (
+        <img
+          src={src}
+          alt="Feature"
+          className={getVideoClasses()}
+        />
+      ) : (
+        <video
+          src={src}
+          loop
+          muted
+          autoPlay
+          className={getVideoClasses()}
+        />
+      )}
       <div className="relative z-10 flex size-full flex-col justify-between p-5 text-white">
         <div>
           <h1 className="bento-title special-font text-white font-bold drop-shadow-[2px_2px_4px_rgba(0,0,0,0.8)] stroke-black stroke-2">{title}</h1>
@@ -168,7 +176,7 @@ const Features: React.FC = () => (
       <div className="grid h-[135vh] w-full grid-cols-2 grid-rows-3 gap-7">
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
           <BentoCard
-            src="videos/feature-2.mp4"
+            src="videos/feature-2.gif"
             title={
               <>
                 Tech<b>n</b>ical
@@ -181,7 +189,7 @@ const Features: React.FC = () => (
 
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1">
           <BentoCard
-            src="videos/feature-3.mp4"
+            src="videos/feature-3.gif"
             title={
               <>
                 c<b>rea</b>tive
@@ -194,7 +202,7 @@ const Features: React.FC = () => (
 
         <BentoTilt className="bento-tilt_1 md:col-span-1">
           <BentoCard
-            src="videos/feature-4.mp4"
+            src="videos/feature-4.gif"
             title={
               <>
                 c<b>orpor</b>ate
