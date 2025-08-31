@@ -224,12 +224,13 @@ const Features: React.FC = () => (
         </BentoTilt>
 
         <BentoTilt className="bento-tilt_2">
-          <video
-            src="videos/feature-5.mp4"
-            loop
-            muted
-            autoPlay
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=1&showinfo=0&rel=0&modestbranding=1"
+            title="HRCC SRM Video"
             className="size-full object-cover object-center"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
           />
         </BentoTilt>
       </div>
