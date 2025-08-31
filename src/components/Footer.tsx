@@ -1,8 +1,9 @@
-import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 const socialLinks = [
   { href: "https://instagram.com/hrcc.srm", icon: <FaInstagram /> },
   { href: "https://linkedin.com/company/hrcc-srm", icon: <FaLinkedin /> },
+  { href: "https://github.com/HRCC-SRM", icon: <FaGithub />},
  // { href: "https://youtube.com", icon: <FaYoutube /> },
  // { href: "https://medium.com", icon: <FaMedium /> },
 ];
