@@ -15,19 +15,17 @@ interface TeamMemberProps {
 }
 
 const TeamMember: React.FC<TeamMemberProps> = ({ name, role, image, socials }) => (
-  <div className="group relative overflow-hidden rounded-lg bg-gray-900 p-6 transition-all duration-300 hover:scale-105">
-    <div className="relative h-64 w-full overflow-hidden rounded-md">
+  <div className="group relative overflow-hidden rounded-lg bg-gray-900 transition-all duration-300 hover:scale-105 flex flex-col items-center w-72 h-96">
+    <div className="relative h-64 w-56 overflow-hidden rounded-md mt-6">
       <img
         src={image}
         alt={name}
         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        <div className="absolute bottom-0 left-0 right-0 p-4">
-          <h3 className="text-xl font-bold text-white">{name}</h3>
-          <p className="text-gray-300">{role}</p>
+        <div className="absolute bottom-0 left-0 right-0 p-4 flex justify-center">
           {socials && (
-            <div className="mt-2 flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3">
               {socials.website && (
                 <a href={socials.website} target="_blank" rel="noopener noreferrer" className="text-white hover:text-green-400" title={socials.websiteLabel || 'Website'}>
                   <span className="sr-only">Website</span>
@@ -72,6 +70,10 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, role, image, socials }) =
           )}
         </div>
       </div>
+    </div>
+    <div className="p-4 text-center">
+      <h3 className="text-xl font-bold text-white mb-2">{name}</h3>
+      <p className="text-gray-300">{role}</p>
     </div>
   </div>
 );
@@ -196,27 +198,39 @@ const Team: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-16 text-center">
           <h2 className="special-font mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
-            Our <span className="text-green-600">Team</span>
+            THE CORE TEAM OF <span className="text-red-500">HRCC SRM</span>
           </h2>
-          <p className="mx-auto max-w-2xl text-gray-400">
-            Meet the brilliant minds behind Hacker Rank Tech Circle
-          </p>
         </div>
 
-        {/* Founders */}
+        {/* Core Team */}
         <div className="mb-20">
-          <h3 className="mb-8 text-2xl font-bold md:text-3xl">Founding Team</h3>
-          <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
+          <div className="grid gap-8 md:grid-cols-4 lg:gap-12">
             {founders.map((member, index) => (
               <TeamMember key={`founder-${index}`} {...member} />
             ))}
           </div>
         </div>
 
+        <div className="mb-16 text-center">
+          <h2 className="special-font mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
+            OUR <span className="text-red-500">DOMAINS LEADS</span>
+          </h2>
+        </div>
+
+        {/* Creative Leads */}
+        <div className="mb-20">
+          <h3 className="mb-8 text-2xl font-bold md:text-3xl text-green-500 text-center">CREATIVES</h3>
+          <div className="flex justify-center gap-8 lg:gap-12">
+            {creativeLeads.map((lead, index) => (
+              <TeamMember key={`creative-lead-${index}`} {...lead} />
+            ))}
+          </div>
+        </div>
+
         {/* Technical Leads */}
         <div className="mb-20">
-          <h3 className="mb-8 text-2xl font-bold md:text-3xl">Technical Team</h3>
-          <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
+          <h3 className="mb-8 text-2xl font-bold md:text-3xl text-green-500 text-center">TECHNICAL</h3>
+          <div className="flex justify-center gap-8 lg:gap-12">
             {technicalLeads.map((lead, index) => (
               <TeamMember key={`tech-lead-${index}`} {...lead} />
             ))}
@@ -224,21 +238,11 @@ const Team: React.FC = () => {
         </div>
 
         {/* Corporate Leads */}
-        <div className="mb-20">
-          <h3 className="mb-8 text-2xl font-bold md:text-3xl">Corporate Team</h3>
-          <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
+        <div>
+          <h3 className="mb-8 text-2xl font-bold md:text-3xl text-green-500 text-center">CORPORATE</h3>
+          <div className="flex justify-center gap-8 lg:gap-12">
             {corporateLeads.map((lead, index) => (
               <TeamMember key={`corp-lead-${index}`} {...lead} />
-            ))}
-          </div>
-        </div>
-
-        {/* Creative Leads */}
-        <div>
-          <h3 className="mb-8 text-2xl font-bold md:text-3xl">Creative Team</h3>
-          <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
-            {creativeLeads.map((lead, index) => (
-              <TeamMember key={`creative-lead-${index}`} {...lead} />
             ))}
           </div>
         </div>
