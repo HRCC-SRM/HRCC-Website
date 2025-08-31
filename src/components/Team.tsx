@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
 import gsap from "gsap";
 
@@ -12,6 +12,18 @@ interface TeamMemberProps {
   twitter?: string;
 }
 
+// Throttle function for performance
+const throttle = (func: Function, limit: number) => {
+  let inThrottle: boolean;
+  return function(this: any, ...args: any[]) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  }
+};
+
 const TeamMember: React.FC<TeamMemberProps> = ({
   name,
   role,
@@ -24,7 +36,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   const [isHovered, setIsHovered] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = useCallback(throttle((e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
     
     const rect = cardRef.current.getBoundingClientRect();
@@ -34,29 +46,29 @@ const TeamMember: React.FC<TeamMemberProps> = ({
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
     
-    const rotateX = ((y - centerY) / centerY) * -3;
-    const rotateY = ((x - centerX) / centerX) * 3;
+    const rotateX = ((y - centerY) / centerY) * -2; // Reduced rotation for performance
+    const rotateY = ((x - centerX) / centerX) * 2;
     
     gsap.to(cardRef.current, {
-      duration: 0.3,
+      duration: 0.2, // Faster animation
       rotateX,
       rotateY,
       transformPerspective: 1000,
       ease: "power1.out"
     });
-  };
+  }, 16), []); // 60fps throttle
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = useCallback(() => {
     if (!cardRef.current) return;
     
     gsap.to(cardRef.current, {
-      duration: 0.3,
+      duration: 0.2, // Faster animation
       rotateX: 0,
       rotateY: 0,
       ease: "power1.out"
     });
     setIsHovered(false);
-  };
+  }, []);
 
   const socialLinks = [
     { icon: FaGithub, url: github, label: "GitHub" },
@@ -68,13 +80,43 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   return (
     <div
       ref={cardRef}
-      className="group relative h-[420px] w-full max-w-[280px] cursor-pointer"
+      className="group relative h-[420px] w-full max-w-[280px] cursor-pointer performance-optimized"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onMouseEnter={() => setIsHovered(true)}
     >
       {/* Subtle Background Glow */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 to-transparent blur-xl transition-all duration-500 group-hover:blur-2xl group-hover:from-white/10"></div>
+      
+      {/* Traveling Green Line on Border */}
+      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <rect
+            x="0"
+            y="0"
+            width="100"
+            height="100"
+            fill="none"
+            stroke="url(#greenGradient)"
+            strokeWidth="0.5"
+            strokeDasharray="400"
+            strokeDashoffset="400"
+            className="group-hover:animate-draw-border"
+            style={{
+              animationDuration: '1.5s',
+              animationTimingFunction: 'ease-out',
+              animationFillMode: 'forwards'
+            }}
+          />
+          <defs>
+            <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#05C770" />
+              <stop offset="50%" stopColor="#DBFFC2" />
+              <stop offset="100%" stopColor="#05C770" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
       
       {/* Main Card */}
       <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white/10 bg-black/80 backdrop-blur-sm transition-all duration-500 group-hover:border-white/20 group-hover:bg-black/90">
@@ -85,7 +127,8 @@ const TeamMember: React.FC<TeamMemberProps> = ({
           <img
             src={image}
             alt={name}
-            className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105 performance-optimized"
+            loading="lazy"
           />
         </div>
 
