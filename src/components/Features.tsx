@@ -225,7 +225,7 @@ const Features: React.FC = () => (
 
         <BentoTilt className="bento-tilt_2">
           <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=1&showinfo=0&rel=0&modestbranding=1"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=1&showinfo=0&rel=0&modestbranding=1"
             title="HRCC SRM Video"
             className="size-full object-cover object-center"
             frameBorder="0"

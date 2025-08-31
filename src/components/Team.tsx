@@ -100,15 +100,16 @@ const TeamMember: React.FC<TeamMemberProps> = ({
           
           {/* Social Links - Only in content area */}
           {socialLinks.length > 0 && (
-            <div className="flex justify-center gap-2">
+            <div className="flex justify-center gap-2 relative z-20">
               {socialLinks.map(({ icon: Icon, url, label }) => (
                 <a
                   key={label}
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-gray-400 transition-all duration-300 hover:bg-[#05C770] hover:text-black"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-gray-400 transition-all duration-300 hover:bg-[#05C770] hover:text-black relative z-30"
                   aria-label={label}
+                  onClick={(e) => e.stopPropagation()}
                 >
                   <Icon className="h-4 w-4" />
                 </a>
