@@ -218,7 +218,7 @@ const Team = () => {
       name: "Pratyush Srivastava",
       role: "Technical Lead",
       image: "/team/pratyush.jpg",
-      github: "https://github.com/pratyush-srivastava",
+      github: "https://github.com/Pratyushsrivastavasgn",
       linkedin: "https://linkedin.com/in/pratyush-srivastava",
       instagram: "https://www.instagram.com/pratyushsrivastavasgn",
     },
