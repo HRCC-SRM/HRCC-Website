@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from "react";
+import { useRef, useCallback } from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
 import gsap from "gsap";
 
@@ -33,7 +33,6 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   instagram,
   twitter,
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = useCallback(throttle((e: React.MouseEvent<HTMLDivElement>) => {
@@ -67,7 +66,6 @@ const TeamMember: React.FC<TeamMemberProps> = ({
       rotateY: 0,
       ease: "power1.out"
     });
-    setIsHovered(false);
   }, []);
 
   const socialLinks = [
@@ -83,7 +81,6 @@ const TeamMember: React.FC<TeamMemberProps> = ({
       className="group relative h-[420px] w-full max-w-[280px] cursor-pointer performance-optimized"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      onMouseEnter={() => setIsHovered(true)}
     >
       {/* Subtle Background Glow */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 to-transparent blur-xl transition-all duration-500 group-hover:blur-2xl group-hover:from-white/10"></div>
