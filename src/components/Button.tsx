@@ -6,6 +6,7 @@ interface ButtonProps {
   rightIcon?: React.ReactNode;
   leftIcon?: React.ReactNode;
   containerClass?: string;
+  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -14,6 +15,7 @@ const Button: React.FC<ButtonProps> = ({
   rightIcon,
   leftIcon,
   containerClass,
+  onClick,
 }) => {
   return (
     <button
@@ -22,6 +24,7 @@ const Button: React.FC<ButtonProps> = ({
         "group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-violet-50 px-7 py-3 text-black",
         containerClass
       )}
+      onClick={onClick}
     >
       {leftIcon}
 

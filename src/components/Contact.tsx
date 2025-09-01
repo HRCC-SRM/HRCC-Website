@@ -49,9 +49,10 @@ const Contact: React.FC = () => {
           />
 
           <Button
-            id="contact-us-btn" // Added id prop as required by Button component
-            title="contact us"
+            id="contact-btn"
+            title="Contact Us"
             containerClass="mt-10 cursor-pointer"
+            onClick={() => window.open("https://mail.google.com/mail/?view=cm&fs=1&to=hrdc@gmail.com", "_blank")}
           />
         </div>
       </div>
