@@ -140,6 +140,8 @@ const Hero: React.FC = () => {
             className="absolute left-0 top-0 size-full object-cover object-center"
             onLoadedData={handleVideoLoad}
           />
+          {/* Black overlay */}
+          <div className="absolute inset-0 bg-black/40 z-20"></div>
         </div>
 
         <h1 className="special-font text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-[8rem] font-black absolute right-5 bottom-5 z-40 text-blue-100" style={{ textTransform: 'none', fontVariant: 'normal', fontFeatureSettings: '"case" off' }}>
