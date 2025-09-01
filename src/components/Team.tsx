@@ -190,6 +190,7 @@ const Team = () => {
       name: "Tanvi Kabi",
       role: "Founder",
       image: "/team/tanvi.jpeg",
+      github: "https://github.com/TanviKabi1",
       linkedin: "https://linkedin.com/in/tanvi-kabi-44582b364",
       instagram: "https://instagram.com/tanvikabi",
     },
@@ -219,6 +220,7 @@ const Team = () => {
       image: "/team/pratyush.jpg",
       github: "https://github.com/pratyush-srivastava",
       linkedin: "https://linkedin.com/in/pratyush-srivastava",
+      instagram: "https://www.instagram.com/pratyushsrivastavasgn",
     },
   ];
 
@@ -227,15 +229,17 @@ const Team = () => {
       name: "Shagun Upman",
       role: "Creative Lead",
       image: "/team/shagun.jpg",
-      linkedin: "https://linkedin.com/in/shagun-upman",
-      instagram: "https://instagram.com/shagun.upman",
+      linkedin: "https://www.linkedin.com/in/shagun-upman-7086a034b",
+      instagram: "https://www.instagram.com/_artsy_monkey_",
+      github: "https://github.com/ShagunUpman",
     },
     {
       name: "Aarushi Sarkar",
       role: "Creative Lead",
       image: "/team/aarushi.jpeg",
-      linkedin: "https://linkedin.com/in/aarushi-sarkar",
-      github: "https://github.com/aarushi-sarkar",
+      linkedin: "https://www.linkedin.com/in/aarushi-sarkar-45b1a1363/",
+      github: "https://github.com/aarushisarkar",
+      instagram: "https://www.instagram.com/aarushiisarkar",
     },
   ];
 
@@ -246,13 +250,15 @@ const Team = () => {
       image: "/team/ayush.jpg",
       linkedin: "https://linkedin.com/in/ayush-kumar",
       github: "https://github.com/ayush-kumar",
+      instagram: "https://www.instagram.com/aarushiisarkar",
     },
     {
       name: "Amrita Hariharan",
       role: "Corporate Lead",
       image: "/team/amrita.jpg",
-      linkedin: "https://linkedin.com/in/amrita-hariharan",
-      github: "https://github.com/amrita-hariharan",
+      linkedin: "https://www.linkedin.com/in/amrita-hariharan2205/",
+      github: "https://github.com/amritaa1106",
+      instagram: "https://www.instagram.com/amrita_hariharan_",
     },
   ];
 
