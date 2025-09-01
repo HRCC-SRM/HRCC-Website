@@ -10,6 +10,7 @@ interface TeamMemberProps {
   linkedin?: string;
   instagram?: string;
   twitter?: string;
+  imageClass?: string;
 }
 
 // Throttle function for performance
@@ -32,6 +33,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   linkedin,
   instagram,
   twitter,
+  imageClass,
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -124,7 +126,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
           <img
             src={image}
             alt={name}
-            className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105 performance-optimized"
+            className={`h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105 performance-optimized ${imageClass ?? ''}`}
             loading="lazy"
           />
         </div>
@@ -198,6 +200,7 @@ const Team = () => {
       github: "https://github.com/12asascoder",
       linkedin: "https://linkedin.com/in/arnav-puggal-ab72b5247",
       instagram: "https://instagram.com/arnav_puggal",
+      imageClass: "object-top",
     },
   ];
 

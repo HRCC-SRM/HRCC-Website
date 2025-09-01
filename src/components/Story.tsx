@@ -66,11 +66,11 @@ const FloatingImage: React.FC = () => {
 
         <div className="relative size-full">
           <AnimatedTitle
-            title="the st<b>o</b>ry of <br /> Hacker Rank Campus <b>Crew</b>"
-            containerClass="mt-8 md:mt-32 lg:mt-[13rem] pointer-events-none mix-blend-difference relative z-10"
+            title="Gui<b>d</b>ed by <br /> Centre of Exc<b>e</b>llence"
+            containerClass="mt-0 md:mt-0 lg:mt-[0.5rem] pointer-events-none mix-blend-difference relative z-10"
           />
 
-          <div className="story-img-container">
+          <div className="story-img-container -mt-16 md:-mt-24 lg:-mt-32">
             <div className="story-img-mask">
               <div className="story-img-content">
                 <img
@@ -115,12 +115,10 @@ const FloatingImage: React.FC = () => {
           </div>
         </div>
 
-        <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
+        <div className="mt-4 flex w-full justify-center md:mt-10 md:me-44 md:justify-end">
           <div className="flex h-full w-fit flex-col items-center md:items-start">
             <p className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start">
-            From hackathons and coding competitions to seminars, workshops, and
-  collaborative projects — our club hosts events that spark innovation,
-  build skills, and create lasting connections.
+            The Centre of Excellence envisions advancing transparency and accessibility in computational models and scientific insights, fostering innovation across academic and industrial ecosystems. Its mission is to translate complex models into intuitive, real-time simulations that enhance education, strengthen research, and support industrial problem-solving.
             </p>
 
             <Button

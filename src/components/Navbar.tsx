@@ -6,7 +6,12 @@ import { useEffect, useRef, useState } from "react";
 
 
 
-const navItems = ["Home", "Domains", "About", "Contact"];
+const navItems = [
+  { name: "Home", href: "#home" },
+  { name: "Domains", href: "#team" },
+  { name: "About", href: "#story" },
+  { name: "Contact", href: "#contact" },
+];
 
 const NavBar = () => {
   // Ref for navigation container
@@ -80,10 +85,10 @@ const NavBar = () => {
               {navItems.map((item, index) => (
                 <a
                   key={index}
-                  href={`#${item.toLowerCase()}`}
+                  href={item.href}
                   className="nav-hover-btn"
                 >
-                  {item}
+                  {item.name}
                 </a>
               ))}
             </div>
