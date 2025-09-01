@@ -209,10 +209,11 @@ const Team = () => {
     {
       name: "Anik Das",
       role: "Technical Lead",
-      image: "/team/anik.jpg",
+      image: "/team/anik2.jpeg",
       github: "https://github.com/coderanik",
       linkedin: "https://linkedin.com/in/anikdas21",
       instagram: "https://instagram.com/anikk.dass",
+      imageClass: "object-[50%_30%]",
     },
     {
       name: "Pratyush Srivastava",
@@ -248,9 +249,9 @@ const Team = () => {
       name: "Ayush Kumar",
       role: "Corporate Lead",
       image: "/team/ayush.jpg",
-      linkedin: "https://linkedin.com/in/ayush-kumar",
-      github: "https://github.com/ayush-kumar",
-      instagram: "https://www.instagram.com/aarushiisarkar",
+      linkedin: "https://www.linkedin.com/in/ayush-kumar-517391325",
+      github: "https://github.com/AyushOg18",
+      instagram: "https://www.instagram.com/ayushk._18",
     },
     {
       name: "Amrita Hariharan",
