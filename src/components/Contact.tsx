@@ -44,10 +44,9 @@ const Contact: React.FC = () => {
           </p>
 
           <AnimatedTitle
-  title="De<b>c</b>r<b>y</b>pt <br />t<b>h</b>e <br />Sy<b>s</b>t<b>e</b>m "
-  containerClass="special-font !md:text-[6.2rem] w-full font-zentry !text-5xl !font-black !leading-[.9]"
-/>
-
+            title="De<b>c</b>r<b>y</b>pt <br />t<b>h</b>e <br />Sy<b>s</b>t<b>e</b>m "
+            containerClass="special-font !md:text-[6.2rem] w-full font-zentry !text-5xl !font-black !leading-[.9]"
+          />
 
           <Button
             id="contact-us-btn" // Added id prop as required by Button component

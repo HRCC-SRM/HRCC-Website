@@ -209,8 +209,9 @@ const Team = () => {
       name: "Anik Das",
       role: "Technical Lead",
       image: "/team/anik.jpg",
-      github: "https://github.com/anik-das",
-      linkedin: "https://linkedin.com/in/anik-das",
+      github: "https://github.com/coderanik",
+      linkedin: "https://linkedin.com/in/anikdas21",
+      instagram: "https://instagram.com/anikk.dass",
     },
     {
       name: "Pratyush Srivastava",
