@@ -158,12 +158,12 @@ const Hero: React.FC = () => {
               Ranked by <b>Skill</b> <br /> Powered by <b>Intelligence</b>.
             </p>
 
-            <Button
+            <a href="https://www.instagram.com/hrcc.srm/"><Button
               id="watch-trailer"
-              title="Watch trailer"
+              title="Follow us on Instagram"
               leftIcon={<TiLocationArrow />}
               containerClass="bg-gradient-to-r from-green-500 to-lime-200 flex-center gap-1 text-sm sm:text-base"
-            />
+            /></a>
           </div>
         </div>
       </div>

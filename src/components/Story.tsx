@@ -121,11 +121,11 @@ const FloatingImage: React.FC = () => {
             The Centre of Excellence envisions advancing transparency and accessibility in computational models and scientific insights, fostering innovation across academic and industrial ecosystems. Its mission is to translate complex models into intuitive, real-time simulations that enhance education, strengthen research, and support industrial problem-solving.
             </p>
 
-            <Button
+            <a href="https://www.srmist.edu.in/department/department-of-computational-intelligence/centre-of-excellence-for-agentictwins-agentic-ai-digital-twins-and-metaverse/"><Button 
               id="realm-btn"
-              title="COMING SOON"
+              title="Learn more!"
               containerClass="mt-5"
-            />
+            /></a>
           </div>
         </div>
       </div>
