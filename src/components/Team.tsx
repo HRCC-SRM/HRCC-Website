@@ -213,7 +213,7 @@ const Team = () => {
   github: "https://github.com/coderanik",
   linkedin: "https://linkedin.com/in/anikdas21",
   instagram: "https://instagram.com/anikk.dass",
-  imageClass: "object-[50%_25%]", // shifts image slightly lower
+  imageClass: "object-[50%_24%]", // shifts image slightly lower
 },
     {
       name: "Pratyush Srivastava",
