@@ -206,15 +206,15 @@ const Team = () => {
   ];
 
   const technicalLeads = [
- {
-  name: "Anik Das",
-  role: "Technical Lead",
-  image: "/team/anik2.jpeg",
-  github: "https://github.com/coderanik",
-  linkedin: "https://linkedin.com/in/anikdas21",
-  instagram: "https://instagram.com/anikk.dass",
-  imageClass: "object-[50%_24%]", // shifts image slightly lower
-},
+    {
+      name: "Anik Das",
+      role: "Technical Lead",
+      image: "/team/anik.jpeg",
+      github: "https://github.com/coderanik",
+      linkedin: "https://linkedin.com/in/anikdas21",
+      instagram: "https://instagram.com/anikk.dass",
+      imageClass: "object-[50%_20%]",
+    },
     {
       name: "Pratyush Srivastava",
       role: "Technical Lead",
