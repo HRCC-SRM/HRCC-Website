@@ -149,9 +149,9 @@ export const BentoCard: React.FC<BentoCardProps> = ({
 };
 
 const Features: React.FC = () => (
-  <section className="bg-black pb-52">
+  <section className="relative bg-black pb-52">
     <div className="container mx-auto px-3 md:px-10">
-      <div className="px-5 py-32">
+      <div className="px-5 py-16 sm:py-24 md:py-32">
     
 
       </div>

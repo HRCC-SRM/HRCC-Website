@@ -59,7 +59,7 @@ const FloatingImage: React.FC = () => {
 
   return (
     <div id="story" className="min-h-dvh w-screen bg-black text-blue-50">
-      <div className="flex size-full flex-col items-center py-10 pb-24">
+      <div className="flex size-full flex-col items-center pt-32 sm:pt-40 md:pt-48 pb-24">
         <p className="font-general text-sm uppercase md:text-[10px]">
         
         </p>

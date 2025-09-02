@@ -144,7 +144,7 @@ const Hero: React.FC = () => {
           <div className="absolute inset-0 bg-black/40 z-20"></div>
         </div>
 
-        <h1 className="special-font text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-[8rem] font-black absolute right-5 bottom-5 z-40 text-blue-100" style={{ textTransform: 'none', fontVariant: 'normal', fontFeatureSettings: '"case" off' }}>
+        <h1 className="special-font text-lg sm:text-2xl md:text-4xl lg:text-6xl xl:text-[6rem] font-black absolute right-2 sm:right-5 bottom-2 sm:bottom-5 z-40 text-blue-100 leading-tight" style={{ textTransform: 'none', fontVariant: 'normal', fontFeatureSettings: '"case" off' }}>
           Campus Crew
         </h1>
 
