@@ -16,6 +16,18 @@ const About = () => {
         scrub: 0.5,
         pin: true,
         pinSpacing: true,
+        onUpdate: (self) => {
+          // Smooth crossfade between images based on scroll progress
+          const progress = self.progress;
+          const image1 = document.querySelector(".about-image-1");
+          const image2 = document.querySelector(".about-image-2");
+          
+          if (image1 && image2) {
+            // Crossfade: image1 (about-2.) fades out, image2 (about.png) fades in
+            gsap.set(image1, { opacity: 1 - progress });
+            gsap.set(image2, { opacity: progress });
+          }
+        },
       },
     });
 
@@ -49,9 +61,14 @@ const About = () => {
       <div className="h-[50vh] sm:h-dvh w-screen" id="clip">
         <div className="mask-clip-path about-image">
           <img
-            src="img/about.png"
+            src="img/about-2.jpg"
             alt="About"
-            className="absolute left-0 top-0 size-full object-cover"
+            className="about-image-1 absolute left-0 top-0 size-full object-cover"
+          />
+          <img
+            src="img/about.jpg"
+            alt="About"
+            className="about-image-2 absolute left-0 top-0 size-full object-cover opacity-0"
           />
         </div>
       </div>
