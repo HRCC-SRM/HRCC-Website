@@ -225,12 +225,12 @@ const Features: React.FC = () => (
 
         <BentoTilt className="bento-tilt_2">
           <iframe
-            src="https://www.youtube.com/embed/5OIOLwUOH7w?mute=0&loop=1&playlist=5OIOLwUOH7w&controls=1&showinfo=0&rel=0&modestbranding=1"
-            title="HRCC SRM Video"
-            className="size-full object-cover object-center"
+            src="https://player.vimeo.com/video/1115523228?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+            title="RECRUITMENTS OPEN - HackerRank Campus Crew SRM"
           />
         </BentoTilt>
       </div>
