@@ -197,7 +197,7 @@ const Team = () => {
     {
       name: "Arnav Puggal",
       role: "Founder",
-      image: "/team/puggal.jpeg",
+      image: "/team/puggal.jpg",
       github: "https://github.com/12asascoder",
       linkedin: "https://linkedin.com/in/arnav-puggal-ab72b5247",
       instagram: "https://instagram.com/arnav_puggal",
